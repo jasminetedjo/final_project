@@ -1,0 +1,306 @@
+#jump {
+    position: absolute; 
+    top: -500px;
+}
+
+#jump:focus {
+    position: static;
+}
+
+body {
+    font-family: initial;
+    padding-top: 50px;
+}
+nav a {
+    display: block;
+    text-decoration: none;
+    color: rgb(88, 87, 87);
+}
+
+nav li {
+    display: inline-block;
+    position: relative;
+    padding: 5px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+    z-index: 1000;
+    background-color: white;
+}
+
+nav li:hover {
+    text-decoration: underline;
+    background-color: #f1f1f1;
+}
+
+nav a.active {
+    color: navy;
+    font-weight: bold;
+    padding: 2px;
+    border: dotted navy;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    margin: auto;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    font-size: 13px;
+}
+
+.dropdown-arrow {
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+nav {
+    overflow: visible;
+}
+
+/* About Me Section */
+h1 {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+}
+
+.pfp {
+    width: 60%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid gray;
+    display: block;
+    margin: auto;
+}
+
+.bio p {
+    font-size: 18px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 1.5;
+}
+
+.last_bio {
+    padding-bottom: 10px;
+}
+
+footer {
+    padding: 5px;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    background: grey;
+}
+
+.logo_links {
+    margin: 5px;
+    width: 10%;
+    border-radius: 10px;
+    display: inline;
+}
+
+/* Academic Courses Section */
+.courses {
+    background-image: url("../images/campus.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20px;
+}
+
+.current_courses, .finished_courses, .interest_courses, .future_courses{
+    display: block;
+    list-style-type: none;
+    margin: 20px;
+    color: #000;
+    border: 5px gray solid;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    line-height: 1.5;
+    overflow: auto;
+    border-radius: 5px;
+}
+
+.course-container ul {
+    list-style-type: none;
+}
+.current_courses h2, .finished_courses h2, .future_courses h2 {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15x;
+    font-size: 20px;
+}
+
+/* Memories Section*/
+.img_mem {
+    background-color: transparent;
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: auto 0px;
+    border-radius: 5px;
+    border: 5px navy solid;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: auto;
+    margin-bottom: 20px;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.flip-card-inner {
+    position: relative;
+    width: 210px;
+    height: 250px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    margin: 0px;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.flip-card-back {
+    background-color: lightgray;
+    border-radius: 5px;
+    color: black;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100%;
+}
+
+
+@media screen and (min-width: 600px){
+    nav a{
+        font-size: 30px;
+    }
+    h1 {
+        padding-top: 20px;
+        font-size: 60px;
+    }
+    .bio p {
+        font-size: 30px; /* Increase font-size as needed */
+    }
+    footer {
+        font-size: 25px;
+    }
+
+    .current_courses, .finished_courses, .interest_courses, .future_courses {
+        font-size: 30px;
+    }
+    .current_courses h2, .finished_courses h2, .future_courses h2 {
+        font-size: 45px;
+    }
+
+    .dropdown-arrow {
+        font-size: 20px;
+        margin-left: 5px;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        justify-content: center;
+        align-items: start;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .flip-card-back {
+        font-size: 25px;
+    }
+}
+  
+@media screen and (min-width: 1100px) {
+    .pfp {
+        width:30%;
+    }
+
+    nav a{
+        font-size: 26px;
+    }
+
+    .bio p {
+        font-size: 36px;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-bottom: 30px;
+    }
+
+    .logo_links {
+        width: 5%;
+    }
+    
+    footer {
+        font-size: 24px;
+    }
+
+    .img_mem {
+        width: 100%;
+    }
+
+    .flip-card-inner {
+        width: 425px;
+        height: 570px;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        margin-bottom: 20px;
+    }
+}
+
