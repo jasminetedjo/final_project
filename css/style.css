@@ -141,7 +141,7 @@ footer {
     padding: 20px;
 }
 
-.current_courses, .finished_courses, .interest_courses, .future_courses{
+.course_group, .interest_courses{
     display: block;
     list-style-type: none;
     margin: 20px;
@@ -157,7 +157,7 @@ footer {
 .course-container ul {
     list-style-type: none;
 }
-.current_courses p, .finished_courses p, .future_courses p {
+.course_group p {
     font-weight: bold;
     text-align: center;
     margin-bottom: 15x;
@@ -248,10 +248,10 @@ footer {
         font-size: 25px;
     }
 
-    .current_courses, .finished_courses, .interest_courses, .future_courses {
+    .course_group, .interest_courses {
         font-size: 30px;
     }
-    .current_courses p, .finished_courses p, .future_courses p {
+    .course_group p{
         font-size: 45px;
     }
 
