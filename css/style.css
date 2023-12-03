@@ -157,7 +157,7 @@ footer {
 .course-container ul {
     list-style-type: none;
 }
-.current_courses h2, .finished_courses h2, .future_courses h2 {
+.current_courses p, .finished_courses p, .future_courses p {
     font-weight: bold;
     text-align: center;
     margin-bottom: 15x;
@@ -251,7 +251,7 @@ footer {
     .current_courses, .finished_courses, .interest_courses, .future_courses {
         font-size: 30px;
     }
-    .current_courses h2, .finished_courses h2, .future_courses h2 {
+    .current_courses p, .finished_courses p, .future_courses p {
         font-size: 45px;
     }
 
